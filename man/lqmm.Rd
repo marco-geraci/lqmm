@@ -136,7 +136,7 @@ Marco Geraci
 }
 
 \note{
-Updates/FAQ/news are published here \url{http://marcogeraci.wordpress.com/}. New versions are usually published here \url{https://r-forge.r-project.org/R/?group_id=1396} before going on CRAN.
+Updates/FAQ/news are published here \url{https://marcogeraci.wordpress.com/}. New versions are usually published here \url{https://github.com/marco-geraci/lqmm/} before going on CRAN.
 }
 
 \seealso{

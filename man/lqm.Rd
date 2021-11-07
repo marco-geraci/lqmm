@@ -80,7 +80,7 @@ Koenker R and Bassett G (1978). Regression Quantiles. Econometrica 46(1), 33--50
 Marco Geraci}
 
 \note{
-Updates/FAQ/news are published here \url{http://marcogeraci.wordpress.com/}. New versions are usually published here \url{https://r-forge.r-project.org/R/?group_id=1396} before going on CRAN.
+Updates/FAQ/news are published here \url{https://marcogeraci.wordpress.com/}. New versions are usually published here \url{https://github.com/marco-geraci/lqmm/} before going on CRAN.
 }
 
 \seealso{
