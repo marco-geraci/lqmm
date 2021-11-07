@@ -1,0 +1,40 @@
+if (!exists("meta") || is.null(meta)) meta <- packageDescription("lqmm")
+
+citHeader("To cite package", sQuote(meta$Package), "in publications use:")
+
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
+vers <- paste("R package version", meta$Version)
+
+citEntry(entry = "Article",
+  title        = "Linear Quantile Mixed Models: The {lqmm} Package for Laplace Quantile Regression",
+  author       = personList(as.person("Marco Geraci")),
+  journal      = "Journal of Statistical Software",
+  year         = "2014",
+  volume       = "57",
+  number       = "13",
+  pages        = "1--29",
+  doi          = "10.18637/jss.v057.i13",
+
+  textVersion  =
+  paste("Geraci M (2014).",
+        "Linear Quantile Mixed Models: The lqmm Package for Laplace Quantile Regression.",
+        "Journal of Statistical Software, 57(13), 1-29.")
+)
+ 
+citEntry(
+	entry = "Article",
+ 	author = personList(as.person("Marco Geraci"),as.person("Matteo Bottai")),
+	title = "Linear quantile mixed models",
+ 	journal = "Statistics and Computing",
+	volume = "24",
+	number = "3",
+	pages = "461--479",
+	year = "2014",
+	doi = "10.1007/s11222-013-9381-9",
+	textVersion = paste("Geraci M and Bottai M (2014).",
+	"Linear quantile mixed models.",
+	"Statistics and Computing 24(3), 461-479.")
+)
+
+
+citFooter("A BibTeX entry for LaTeX users is toBibtex(citation('lqmm'))")

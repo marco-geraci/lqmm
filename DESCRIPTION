@@ -1,0 +1,20 @@
+Package: lqmm
+Type: Package
+Title: Linear Quantile Mixed Models
+Version: 1.5.6
+Date: 2021-11-04
+Author: Marco Geraci
+Maintainer: Marco Geraci <marco.geraci@uniroma1.it>
+Depends: R (>= 3.0.0)
+Imports: stats, utils, nlme (>= 3.1-124), SparseGrid
+Description: Functions to fit quantile regression models for hierarchical
+    data (2-level nested designs) as described in Geraci and
+    Bottai (2014, Statistics and Computing) <doi:10.1007/s11222-013-9381-9>.
+    A vignette is given in Geraci (2014, Journal of Statistical Software)
+    <doi:10.18637/jss.v057.i13> and included in the package documents.
+    The packages also provides functions to fit quantile models for
+    independent	data and for count responses.
+License: GPL (>= 2)
+LazyLoad: yes
+RoxygenNote: 7.0.2
+Encoding: UTF-8

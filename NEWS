@@ -1,0 +1,109 @@
+Changes in lqmm
+
+=============================================
+
+Version 1.0 (April 29, 2012)
+
+- Package lqmm on CRAN
+
+=============================================
+
+Version 1.01 (May 30, 2012)
+
+- Added functions
+- Fixed bugs in ll_h_R and ll_h_d (lqmm.c)
+- Amended cov.sel (lqmm.R) and psi_mat (lqmm.c)
+
+=============================================
+
+Version 1.02 (September 15, 2012)
+
+- Changed lqmControl and lqmmControl parameters (less stringent convergence thresholds) (lqmm.R)
+- Changed quadrature default in lqmm (lqmm.R)
+- Changed to the function boot.lqmm (lqmm.R) which provides bootstrapped standard errors of the coefficients estimates. The starting values used in each bootstrap sample are by default those from a least squares fit (startQR = FALSE). In previous versions of the package, starting values were taken from the fitted object (startQR = TRUE) to speed up convergence in each bootstrap sample. However, this causes the standard errors to be under-estimated
+
+=============================================
+
+Version 1.03 (April 30, 2013)
+
+- Improved documentation
+- Changed default lqmmControl(method = "df") to lqmmControl(method = "gs") (lqmm.R)
+- References updated
+- Fixed bug in covHandling (lqmm.R)
+- Produce warning when likelihood ratio test is negative
+
+=============================================
+
+Version 1.04 (November 1, 2013)
+
+- Changed license from GPL >= 3 to GPL >= 2
+- Added vignette lqmm_manual.pdf
+- Improved code and documentation
+- Corrected bug in lqm.counts (in previous package versions standard errors were NOT divided by sqrt(n))
+- New functions for lqm.counts objects
+
+=============================================
+
+Version 1.5 (May 1, 2014)
+
+- Changed versioning
+- S3 methods registered
+- Introduced new generic functions boot, extractBoot
+- Function raneff.lqmm renamed ranef.lqmm
+- Function cov.lqmm renamed VarCorr.lqmm
+- Imported nlme generic ranef and VarCorr
+
+=============================================
+
+Version 1.5.1 (December 10, 2014)
+
+- Changed maintainer's email address
+- Corrected bug in qal
+- Added constraint on tau in asymmetric Laplace distribution functions
+- Added warning when user defines sigma < 0 in asymmetric Laplace distribution functions
+
+
+=============================================
+
+Version 1.5.2 (September 21, 2015)
+
+- Corrected bug in predict.lqm
+- Corrected bug in varAL
+- Removed rounding of values of 'tau' from lqm and lqmm
+- New lqm routine ("gs2") more stable with larger datasets. Default is "gs1". See ?lqmControl for details
+- New function predint.lqmm to calculate prediction intervals in lqmm
+- Replaced ChangeLog with NEWS (which is more appropriate)
+- Acknowledgements: thanks to Nathan Pace for reporting bugs and other issues
+
+=============================================
+
+Version 1.5.3 (January 28, 2016)
+
+- Updated function VarCorr for compatibility with nlme 3.1-123
+
+=============================================
+
+Version 1.5.4 (April 7, 2018)
+
+- Fixed bug in createLaguerre
+- lqmgsR: changed gradient (no division by n)
+- Added smooth approximation loss function
+- Registered dll routines
+- Fixed CRAN message 'Note: break used in wrong context: no loop is visible'
+- Removed LRT from lqmm summary
+
+=============================================
+
+Version 1.5.5 (December 12, 2019)
+
+- Fixed CRAN error related to _R_CLASS_MATRIX_ARRAY_ starting from R 4.0.0
+- Fixed bug in boot.lqm
+- Fixed bug in boot.lqmm
+
+=============================================
+
+Version 1.5.6 (November 4, 2021)
+
+- CRAN request to define USE_FC_LEN_T in headers, obligatory starting from R 4.2.0
+- Added newdata argument in predict.lqmm
+- Changed maintainer's email
