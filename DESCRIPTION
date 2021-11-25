@@ -1,8 +1,8 @@
 Package: lqmm
 Type: Package
 Title: Linear Quantile Mixed Models
-Version: 1.5.6
-Date: 2021-11-04
+Version: 1.5.7
+Date: 2021-11-25
 Author: Marco Geraci
 Maintainer: Marco Geraci <marco.geraci@uniroma1.it>
 Depends: R (>= 3.0.0)
