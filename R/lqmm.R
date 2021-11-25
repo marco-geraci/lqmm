@@ -1068,8 +1068,8 @@ if(nq == 1){
 		FIT_ARGS$sigma_0 <- invvarAL(mean(lmfit$residuals^2), 0.5)
 	}
 
-	if(control$method == "gs") fit <- try(do.call(lqmm.fit.gs, FIT_ARGS))
-	if(control$method == "df") fit <- try(do.call(lqmm.fit.df, FIT_ARGS))
+	if(control$method == "gs") fit <- try(do.call(lqmm.fit.gs, FIT_ARGS), silent = TRUE)
+	if(control$method == "df") fit <- try(do.call(lqmm.fit.df, FIT_ARGS), silent = TRUE)
     if(!inherits(fit, "try-error")) bootmat[i,] <- c(fit$theta , fit$scale)
   }
 } else {
@@ -1097,8 +1097,8 @@ if(nq == 1){
 
 		FIT_ARGS$tau <- object$tau[j];
 
-		if(control$method == "gs") fit <- try(do.call(lqmm.fit.gs, FIT_ARGS));
-		if(control$method == "df") fit <- try(do.call(lqmm.fit.df, FIT_ARGS));
+		if(control$method == "gs") fit <- try(do.call(lqmm.fit.gs, FIT_ARGS), silent = TRUE);
+		if(control$method == "df") fit <- try(do.call(lqmm.fit.df, FIT_ARGS), silent = TRUE);
 		if(!inherits(fit, "try-error")) bootmat[i,,j] <- c(fit$theta , fit$scale)
     }
   }
