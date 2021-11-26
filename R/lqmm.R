@@ -946,7 +946,7 @@ coln <- c("Value", "Std. Error", "lower bound", "upper bound", "Pr(>|t|)")
     B <- boot.lqmm(object, ...)
 	R <- attr(B, "R")
     if(nq == 1){
-		Cov <- cov(as.matrix(B))
+		Cov <- cov(as.matrix(B), use = "na.or.complete")
 		stds <- sqrt(diag(Cov))
 		tP <- 2*pt(-abs(est/stds), R - 1)
 		lower <- est + qt(alpha/2, R - 1)*stds
@@ -955,7 +955,7 @@ coln <- c("Value", "Std. Error", "lower bound", "upper bound", "Pr(>|t|)")
 		colnames(ans) <- coln
 		ans <- ans[c(nn),,drop=FALSE]
     } else {
-		Cov <- apply(B, 3, function(x) cov(as.matrix(x)))
+		Cov <- apply(B, 3, function(x) cov(as.matrix(x), use = "na.or.complete"))
 		stds <- sqrt(apply(Cov, 2, function(x, n) diag(matrix(x, n, n, byrow = TRUE)), n = npars))
 		tP <- 2*pt(-abs(est/stds), R - 1)
 		lower <- est + qt(alpha/2, R - 1)*stds
